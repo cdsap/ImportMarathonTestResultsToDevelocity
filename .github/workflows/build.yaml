@@ -1,7 +1,7 @@
 name: Run Gradle on PRs
 on:
   push:
-    branches: [ main ]
+    branches: [ 3_0_2_jdk21_agp_9 ]
 jobs:
   build:
     strategy:
@@ -17,5 +17,7 @@ jobs:
           distribution: ${{ matrix.distribution }}
           java-version: ${{ matrix.java-version }}
       - name: Execute Gradle build
-        run: ./gradlew marathonDebugAndroidTest 
+        run: ./gradlew marathonDebugAndroidTest
+        env:
+          DEVELOCITY_ACCESS_KEY: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
     continue-on-error: true
