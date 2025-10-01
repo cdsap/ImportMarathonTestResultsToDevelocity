@@ -23,7 +23,7 @@ jobs:
           git clone https://github.com/cdsap/MarathonTestPlugin.git
           ls
           echo "1"
-          cd marathon-gradle-plugin
+          cd MarathonTestPlugin
           ./gradlew publishToMavenLocal
           cd ../..
           ./gradlew marathonDebugAndroidTest --info
