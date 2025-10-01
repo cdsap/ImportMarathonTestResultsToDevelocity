@@ -21,6 +21,7 @@ jobs:
           mkdir tmp_marathon
           cd tmp_marathon
           git clone https://github.com/cdsap/MarathonTestPlugin.git
+          ls
           cd marathon-gradle-plugin
           ./gradlew publishToMavenLocal
           cd ../..
