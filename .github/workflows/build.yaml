@@ -22,6 +22,7 @@ jobs:
           cd tmp_marathon
           git clone https://github.com/cdsap/MarathonTestPlugin.git
           ls
+          echo "1"
           cd marathon-gradle-plugin
           ./gradlew publishToMavenLocal
           cd ../..
