@@ -19,6 +19,7 @@ jobs:
       - name: d
         run: |
           cd /usr/local/lib/android/sdk
+          ls 
           ls
                
       - name: Execute Gradle build
