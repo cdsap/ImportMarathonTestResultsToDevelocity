@@ -17,7 +17,7 @@ jobs:
           distribution: ${{ matrix.distribution }}
           java-version: ${{ matrix.java-version }}
       - name: Execute Gradle build
-        run: ./gradlew marathonDebugAndroidTest
+        run: ./gradlew marathonDebugAndroidTest --info
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
     continue-on-error: true
