@@ -16,6 +16,11 @@ jobs:
         with:
           distribution: ${{ matrix.distribution }}
           java-version: ${{ matrix.java-version }}
+      - name: d
+        run: |
+          cd /usr/local/lib/android/sdk
+          ls
+               
       - name: Execute Gradle build
         run: |
           mkdir tmp_marathon
