@@ -1,7 +1,7 @@
 name: Run Gradle on PRs
 on:
   push:
-    branches: [ 3_0_2_jdk21_agp_9 ]
+    branches: [ main ]
 jobs:
   build:
     strategy:
