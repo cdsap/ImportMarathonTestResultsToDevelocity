@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    id("com.malinskiy.marathon") version "0.10.1"
+    id("com.malinskiy.marathon") version "0.10.3-test"
 }
 
 android {

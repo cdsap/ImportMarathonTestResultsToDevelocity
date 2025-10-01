@@ -17,7 +17,14 @@ jobs:
           distribution: ${{ matrix.distribution }}
           java-version: ${{ matrix.java-version }}
       - name: Execute Gradle build
-        run: ./gradlew marathonDebugAndroidTest --info
+        run: |
+          mkdir tmp_marathon
+          cd tmp_marathon
+          git clone https://github.com/cdsap/MarathonTestPlugin.git
+          cd marathon-gradle-plugin
+          ./gradlew publishToMavenLocal
+          cd ../..
+          ./gradlew marathonDebugAndroidTest --info
         env:
           DEVELOCITY_ACCESS_KEY: ${{ secrets.DEVELOCITY_ACCESS_KEY }}
     continue-on-error: true
